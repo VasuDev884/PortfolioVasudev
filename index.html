@@ -1,553 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasudev - MERN Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-            min-height: 100vh;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa, #3b82f6, #1d4ed8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-10px) rotate(1deg); }
-            50% { transform: translateY(-5px) rotate(-0.5deg); }
-            75% { transform: translateY(-15px) rotate(0.5deg); }
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
-        }
-        
-        .skill-badge {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid #475569;
-            backdrop-filter: blur(10px);
-        }
-        
-        .skill-badge:hover {
-            border-color: #60a5fa;
-            transform: scale(1.05);
-        }
-        
-        .glass-card {
-            background: rgba(30, 41, 59, 0.3);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(71, 85, 105, 0.3);
-        }
-        
-        .typing-text::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        .experience-timeline {
-            position: relative;
-        }
-        
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #60a5fa, #3b82f6);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-left: 50px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            background: #60a5fa;
-            border-radius: 50%;
-            border: 3px solid #0f172a;
-        }
-        
-        .project-card {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid #374151;
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            background: rgba(30, 41, 59, 0.6);
-            border-color: #60a5fa;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasudev - React.js Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #172554 45%, #1e293b 100%);
+      min-height: 100vh;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #93c5fd, #60a5fa, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(96, 165, 250, 0.15);
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.25);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.18);
+      border-color: rgba(96, 165, 250, 0.35);
+    }
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    .typing-text::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%,50% { opacity: 1; }
+      51%,100% { opacity: 0; }
+    }
+    .skill-badge {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      transition: all 0.25s ease;
+    }
+    .skill-badge:hover {
+      border-color: #60a5fa;
+      transform: scale(1.04);
+    }
+    .experience-timeline {
+      position: relative;
+    }
+    .experience-timeline::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #60a5fa, #1d4ed8);
+    }
+    .timeline-item {
+      position: relative;
+      margin-left: 48px;
+      margin-bottom: 24px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -35px;
+      top: 10px;
+      width: 11px;
+      height: 11px;
+      border-radius: 9999px;
+      background: #60a5fa;
+      border: 3px solid #0f172a;
+    }
+    .project-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      border-color: rgba(96, 165, 250, 0.45);
+      transform: translateY(-4px);
+    }
+    .stat-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(96, 165, 250, 0.2);
+    }
+  </style>
 </head>
 <body class="gradient-bg text-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold gradient-text">VASUDEV</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                    <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                </div>
-                <button class="md:hidden text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+  <nav class="fixed top-0 w-full z-50 glass-card">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-bold gradient-text">VASUDEV</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+          <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+          <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+          <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-lg text-gray-300 mb-4">Hello! I'm</p>
-                        <h1 class="text-5xl lg:text-6xl font-bold mb-4 gradient-text typing-text">VASUDEV</h1>
-                        <h2 class="text-2xl lg:text-3xl font-semibold text-blue-400 mb-4">MERN Stack Developer</h2>
-                        <p class="text-lg text-gray-300 mb-8">Passionate Full-Stack Developer with 3+ years of experience building fast, user-friendly web applications using React.js, Node.js, and modern technologies.</p>
-                    </div>
-                    
-                    <!-- Action Buttons -->
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition-colors">
-                            Hire Me
-                        </a>
-                        <a href="#about" target="_blank" class="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                           About Me
-                        </a>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="mailto:vasudev.8847@gmail.com" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="tel:+918847279783" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
-                </div>
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+          <div>
+            <p class="text-lg text-blue-200 mb-3">Hello, I'm</p>
+            <h1 class="text-5xl lg:text-6xl font-bold mb-4 gradient-text typing-text">VASUDEV</h1>
+            <h2 class="text-2xl lg:text-3xl font-semibold text-blue-300 mb-5">React.js Developer</h2>
+            <p class="text-lg text-slate-300 leading-8 max-w-2xl">
+              JavaScript developer with 3+ years of production experience building fast, scalable, and user-focused web applications using React.js, Redux Toolkit, REST APIs, and modern frontend tooling.
+            </p>
+          </div>
 
-                <!-- Right Content - Profile Placeholder -->
-                <div class="relative flex justify-center">
-                    <div class="floating">
-                        <div class="w-80 h-80 glass-card rounded-full overflow-hidden border-4 border-blue-500/30">
-                            <div class="w-full h-full flex items-center justify-center">
-                            <img src="./2ndcopy.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition-colors">
+              View Projects
+            </a>
+            <a href="#contact" class="border border-blue-500 text-blue-300 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              Contact Me
+            </a>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:vasudev.8847@gmail.com" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-red-600 transition-colors">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/VasuDev884" target="_blank" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-slate-700 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="tel:+918847279783" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- Main Content Grid -->
-    <section class="py-16 px-6" id="about">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
-            <!-- Left Column -->
-            <div class="lg:col-span-2 space-y-8">
-                <!-- About Me -->
-                <div class="glass-card p-8 rounded-2xl card-hover">
-                    <h2 class="text-3xl font-bold mb-6 gradient-text">About Me</h2>
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <p class="text-gray-300 leading-relaxed mb-4">
-                                I'm Vasudev, a passionate MERN Stack Developer with over 2 years of experience in building fast, user-friendly web applications. I specialize in HTML, CSS, JavaScript, React.js, Node.js, and MongoDB.
-                            </p>
-                            <p class="text-gray-300 leading-relaxed mb-4">
-                                My expertise includes creating scalable solutions, optimizing web application performance, and implementing responsive designs that enhance user engagement. I've successfully led teams and contributed to projects that significantly improved performance and user satisfaction.
-                            </p>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Team Leadership</span>
-                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-sm">Performance Optimization</span>
-                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-sm">API Integration</span>
-                            </div>
-                        </div>
-                        <div class="floating">
-                            <div class="w-full h-64 glass-card rounded-xl flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="text-4xl font-bold text-blue-400 mb-2">3+</div>
-                                    <div class="text-sm text-gray-300">Years Experience</div>
-                                    <div class="mt-4">
-                                        <div class="text-2xl font-bold text-green-400 mb-1">30%</div>
-                                        <div class="text-xs text-gray-300">Faster Load Times</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- My Skills -->
-                <div class="glass-card p-8 rounded-2xl card-hover max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-8 gradient-text">Technical Skills</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fab fa-html5 text-orange-500 text-2xl mb-2"></i>
-                            <p class="text-sm">HTML</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fab fa-css3-alt text-blue-500 text-2xl mb-2"></i>
-                            <p class="text-sm">CSS</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <div class="text-blue-400 text-2xl mb-2 font-bold">TS</div>
-                            <p class="text-sm">TypeScript</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fab fa-js-square text-yellow-400 text-2xl mb-2"></i>
-                            <p class="text-sm">JavaScript</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fab fa-react text-blue-400 text-2xl mb-2"></i>
-                            <p class="text-sm">React.js</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fab fa-node-js text-green-400 text-2xl mb-2"></i>
-                            <p class="text-sm">Node.js</p>
-                        </div>
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fas fa-database text-green-500 text-2xl mb-2"></i>
-                            <p class="text-sm">MongoDB</p>
-                        </div>
-
-                        <div class="skill-badge p-4 rounded-xl text-center card-hover">
-                            <i class="fas fa-wind text-cyan-400 text-2xl mb-2"></i>
-                            <p class="text-sm">Tailwind CSS</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Section -->
-                <div class="glass-card p-8 rounded-2xl card-hover" id="experience">
-                    <h2 class="text-3xl font-bold mb-8 gradient-text">Professional Experience</h2>
-                    <div class="experience-timeline">
-                        <div class="timeline-item mb-8">
-                            <div class="glass-card p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h3 class="text-xl font-semibold text-blue-400">Front End Developer</h3>
-                                        <p class="text-gray-300">Coursi Academy</p>
-                                    </div>
-                                    <span class="text-sm text-gray-400">Nov 2023 - Present</span>
-                                </div>
-                                <ul class="text-gray-300 space-y-2 text-sm">
-                                    <li>• Collaborated with design teams to integrate user interfaces into scalable web applications, boosting user satisfaction scores by 20%.</li>
-                                    <li>• Engineered a complex web system application software that increased customer conversion rates by 12%.</li>
-                                    <li>• Enhanced system accessibility and responsiveness, leading to a 10% increase in daily active users.</li>
-                                    <li>• Contributed to the selection and implementation of front end frameworks, significantly enhancing project workflow.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="glass-card p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h3 class="text-xl font-semibold text-blue-400">Front End Developer</h3>
-                                        <p class="text-gray-300">UpMyRanks</p>
-                                    </div>
-                                    <span class="text-sm text-gray-400">Sep 2022 - Oct 2023</span>
-                                </div>
-                                <ul class="text-gray-300 space-y-2 text-sm">
-                                    <li>• Led a team of 5 in developing a high-performance single-page application using React.js and TypeScript, reducing load time by 30%.</li>
-                                    <li>• Optimized web application performance by integrating advanced JavaScript and TypeScript techniques, enhancing speed by 20%.</li>
-                                    <li>• Made ERP from PHP to React.js, making it 30% faster with improved page load times and smoother user experience.</li>
-                                    <li>• Implemented responsive and accessible design, ensuring compatibility across multiple devices and browsers, boosting user engagement by 25%.</li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="relative flex justify-center">
+          <div class="floating">
+            <div class="w-80 h-80 glass-card rounded-full overflow-hidden border-4 border-blue-500/20">
+              <div class="w-full h-full flex items-center justify-center">
+                <img src="./2ndcopy.png" alt="Vasudev profile" class="w-full h-full object-cover" />
+              </div>
             </div>
-
-            <!-- Right Column -->
-            <div class="space-y-8">
-                <!-- Key Achievements -->
-                <div class="glass-card p-6 rounded-2xl card-hover">
-                    <h3 class="text-xl font-bold mb-4 gradient-text">Key Achievements</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-rocket text-blue-400"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-blue-400">30% Faster</div>
-                                <div class="text-sm text-gray-300">Load Times</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-users text-green-400"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-green-400">25% Increase</div>
-                                <div class="text-sm text-gray-300">User Engagement</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-chart-line text-purple-400"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-purple-400">12% Higher</div>
-                                <div class="text-sm text-gray-300">Conversion Rate</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Projects -->
-                <div class="glass-card p-6 rounded-2xl card-hover" id="projects">
-                    <h3 class="text-xl font-bold mb-4 gradient-text">Featured Projects</h3>
-                    <div class="space-y-4">
-                         <div class="project-card p-4 rounded-lg">
-                        <a href="https://github.com/abhimanyuspark/youtube"  target="_blank" >
-
-                            <h4 class="font-semibold text-blue-400 mb-2">YouTube Clone</h4>
-                            <p class="text-sm text-gray-300 mb-3">I built a YouTube clone using the YouTube API that lets users browse videos by categories like Trending, Music, and Sports, watch them in-app, and view comments for a familiar YouTube-like experience.</p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="px-2 py-1 bg-blue-600/20 text-blue-400 rounded text-xs">React.js</span>
-                                <span class="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded text-xs">redux</span>
-                                <span class="px-2 py-1 bg-orange-400/20 text-orange-400 rounded text-xs">YouTube API</span>
-                                <span class="px-2 py-1 bg-cyan-400/20 text-cyan-400 rounded text-xs">tailwind CSS</span>
-                                
-                            </div>
-                        </div>
-                        <div class="project-card p-4 rounded-lg">
-                    <a href="https://github.com/VasuDev884/E-commerce"  target="_blank">
-
-                           <h4 class="font-semibold text-blue-400 mb-2">E-commerce</h4>
-                           <p class="text-sm text-gray-300 mb-3">Developed a comprehensive dashboard for e-commerce business with analytics, inventory management, and order tracking. Implemented real-time data visualization and responsive design for seamless mobile access.</p>
-                           <div class="flex flex-wrap gap-1">
-                               <span class="px-2 py-1 bg-blue-600/20 text-blue-400 rounded text-xs">React.js</span>
-                               <span class="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded text-xs">redux</span>
-                               <span class="px-2 py-1 bg-orange-400/20 text-orange-400 rounded text-xs">YouTube API</span>
-                               <span class="px-2 py-1 bg-cyan-400/20 text-cyan-400 rounded text-xs">tailwind CSS</span>
-                               
-                           </div>
-                   </a>
-
-                       </div>
-                        <div class="project-card p-4 rounded-lg">
-                            <h4 class="font-semibold text-blue-400 mb-2">School ERP System</h4>
-                            <p class="text-sm text-gray-300 mb-3">Transformed a PHP-based ERP system to React.js, resulting in 30% faster load times. Implemented modules for teachers, students, and parents with features like timetable management, homework tracking, and fee payment.</p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="px-2 py-1 bg-blue-600/20 text-blue-400 rounded text-xs">React.js</span>
-                                <span class="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded text-xs">TypeScript</span>
-                            </div>
-                        </div>
-                        <a href="https://www.coursi.in/"></a>
-                        <div class="project-card p-4 rounded-lg">
-                            <h4 class="font-semibold text-blue-400 mb-2">Coursi Academy Website</h4>
-                            <p class="text-sm text-gray-300 mb-3">Built a user-friendly website for Coursi Academy using HTML, Tailwind CSS, and JavaScript. Features include course details pages, Excel data storage for form submissions, demo booking, enrollment, and course reviews.</p>
-                            <div class="flex flex-wrap gap-1">
-                                <span class="px-2 py-1 bg-orange-600/20 text-orange-400 rounded text-xs">HTML</span>
-                                <span class="px-2 py-1 bg-cyan-600/20 text-cyan-400 rounded text-xs">Tailwind</span>
-                                <span class="px-2 py-1 bg-yellow-600/20 text-yellow-400 rounded text-xs">JavaScript</span>
-                            </div>
-                       
-                        </div>
-                    </a>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="glass-card p-6 rounded-2xl card-hover" id="contact">
-                    <h3 class="text-lg font-bold mb-4 gradient-text">Contact Info</h3>
-                    <div class="space-y-3 text-sm">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-map-marker-alt text-red-500"></i>
-                            <span>Patiala, Punjab, India</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-red-500"></i>
-                            <a href="mailto:vasudev.8847@gmail.com" class="hover:text-blue-400">vasudev.8847@gmail.com</a>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-red-500"></i>
-                            <a href="tel:+918847279783" class="hover:text-blue-400">+91-8847279783</a>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fab fa-linkedin-in text-red-500"></i>
-                            <a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="hover:text-blue-400">LinkedIn Profile</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Contact Form
-                <div class="glass-card p-6 rounded-2xl card-hover">
-                    <h3 class="text-lg font-bold mb-4">Get In Touch</h3>
-                    <div class="space-y-3">
-                        <input type="text" placeholder="Full Name" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/70 focus:border-blue-400 focus:outline-none">
-                        <input type="email" placeholder="Email Address" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/70 focus:border-blue-400 focus:outline-none">
-                        <textarea placeholder="Your Message" rows="3" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-white/70 focus:border-blue-400 focus:outline-none resize-none"></textarea>
-                        <button class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-medium transition-colors">
-                            SEND MESSAGE
-                        </button>
-                    </div>
-                </div> -->
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="glass-card py-8 px-6 mt-16">
-        <div class="max-w-7xl mx-auto text-center">
-            <h3 class="text-2xl font-bold mb-4 gradient-text">VASUDEV</h3>
-            <p class="text-gray-300 mb-4">MERN Stack Developer | Building the Future, One Line of Code at a Time</p>
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="tel:+918847279783" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="mailto:vasudev.8847@gmail.com" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <!-- <a href="https://vasudev-portfolio-tau.vercel.app/" target="_blank" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                    <i class="fas fa-globe"></i>
-                </a> -->
-            </div>
-            <p class="text-sm opacity-75">© 2025 Vasudev. All rights reserved.</p>
+      <div class="grid sm:grid-cols-3 gap-4 mt-14">
+        <div class="stat-card p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-blue-300">3+</div>
+          <div class="text-slate-300 text-sm mt-1">Years of experience</div>
         </div>
-    </footer>
+        <div class="stat-card p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-green-300">30%</div>
+          <div class="text-slate-300 text-sm mt-1">Performance improvement</div>
+        </div>
+        <div class="stat-card p-5 rounded-2xl">
+          <div class="text-3xl font-bold text-purple-300">5</div>
+          <div class="text-slate-300 text-sm mt-1">Engineers led on SPA delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <section class="py-16 px-6" id="about">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 space-y-8">
+        <div class="glass-card p-8 rounded-2xl card-hover">
+          <h2 class="text-3xl font-bold mb-6 gradient-text">About Me</h2>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p class="text-slate-300 leading-8 mb-4">
+                I build reusable, maintainable interfaces with React.js and JavaScript, with hands-on experience in Redux Toolkit, REST API integration, JWT authentication, performance optimisation, and responsive UI development.
+              </p>
+              <p class="text-slate-300 leading-8 mb-4">
+                My recent work has focused on scalable frontend systems, ERP migration from PHP to React, code-splitting and lazy loading, and delivering polished user experiences across browsers and devices.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-5">
+                <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">React.js</span>
+                <span class="px-3 py-1 bg-indigo-600/20 text-indigo-300 rounded-full text-sm">Redux Toolkit</span>
+                <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">REST APIs</span>
+                <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Performance Optimisation</span>
+              </div>
+            </div>
+            <div class="glass-card rounded-2xl p-6">
+              <h3 class="text-xl font-semibold text-blue-300 mb-4">Highlights</h3>
+              <ul class="space-y-3 text-slate-300 text-sm leading-7">
+                <li>• Built reusable UI systems and shared component libraries.</li>
+                <li>• Implemented Redux Toolkit for predictable state management.</li>
+                <li>• Integrated REST APIs with JWT-based authentication flows.</li>
+                <li>• Improved Core Web Vitals with code splitting and lazy loading.</li>
+                <li>• Delivered cross-browser, accessible, responsive interfaces.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(30, 41, 59, 0.95)';
-            } else {
-                nav.style.background = 'rgba(30, 41, 59, 0.3)';
-            }
-        });
+        <div class="glass-card p-8 rounded-2xl card-hover" id="skills">
+          <h2 class="text-3xl font-bold mb-8 gradient-text">Technical Skills</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fab fa-js-square text-yellow-400 text-2xl mb-2"></i><p class="text-sm">JavaScript ES6+</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fab fa-react text-blue-400 text-2xl mb-2"></i><p class="text-sm">React.js</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-blue-300 text-2xl mb-2 font-bold">RTK</div><p class="text-sm">Redux Toolkit</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-cyan-300 text-2xl mb-2 font-bold">API</div><p class="text-sm">REST APIs</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-blue-300 text-2xl mb-2 font-bold">TS</div><p class="text-sm">TypeScript</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fab fa-node-js text-green-400 text-2xl mb-2"></i><p class="text-sm">Node.js</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fas fa-database text-green-500 text-2xl mb-2"></i><p class="text-sm">MongoDB</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fas fa-wind text-cyan-400 text-2xl mb-2"></i><p class="text-sm">Tailwind CSS</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-orange-300 text-2xl mb-2 font-bold">JWT</div><p class="text-sm">JWT Auth</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-purple-300 text-2xl mb-2 font-bold">V</div><p class="text-sm">Vite</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><i class="fab fa-git-alt text-orange-500 text-2xl mb-2"></i><p class="text-sm">Git & GitHub</p></div>
+            <div class="skill-badge p-4 rounded-xl text-center"><div class="text-pink-300 text-2xl mb-2 font-bold">UI</div><p class="text-sm">Responsive UI</p></div>
+          </div>
+        </div>
 
-        // Add typing effect to the main heading
-        const texts = ["VASUDEV", "MERN STACK","REACT JS","TYPESCRIPT", "(UI) (UX)" ,"MONGO DB", "NODE JS" , "ANIME.JS"];
-        const heading = document.querySelector('.typing-text');
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
+        <div class="glass-card p-8 rounded-2xl card-hover" id="experience">
+          <h2 class="text-3xl font-bold mb-8 gradient-text">Professional Experience</h2>
+          <div class="experience-timeline">
+            <div class="timeline-item">
+              <div class="glass-card p-6 rounded-xl">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                  <div>
+                    <h3 class="text-xl font-semibold text-blue-300">React.js / Frontend Developer</h3>
+                    <p class="text-slate-300">Coursi Academy — EdTech Platform</p>
+                  </div>
+                  <span class="text-sm text-slate-400">Nov 2023 – Present</span>
+                </div>
+                <ul class="text-slate-300 space-y-2 text-sm leading-7">
+                  <li>• Built scalable and reusable UI components in React.js to improve development velocity.</li>
+                  <li>• Implemented Redux Toolkit for complex application state and predictable data flow.</li>
+                  <li>• Integrated REST APIs with JWT authentication, async handling, loading states, and error flows.</li>
+                  <li>• Applied code splitting, lazy loading, and Lighthouse benchmarking for measurable performance gains.</li>
+                  <li>• Worked closely with design and backend teams to deliver high-quality, responsive interfaces.</li>
+                </ul>
+              </div>
+            </div>
 
-        function typeWriter() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                heading.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                heading.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
+            <div class="timeline-item">
+              <div class="glass-card p-6 rounded-xl">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3 mb-4">
+                  <div>
+                    <h3 class="text-xl font-semibold text-blue-300">React.js / Frontend Developer</h3>
+                    <p class="text-slate-300">UpMyRanks — SaaS / EdTech Platform</p>
+                  </div>
+                  <span class="text-sm text-slate-400">Sep 2022 – Oct 2023</span>
+                </div>
+                <ul class="text-slate-300 space-y-2 text-sm leading-7">
+                  <li>• Led a team of 5 engineers building a high-performance React.js + TypeScript SPA.</li>
+                  <li>• Drove PHP to React ERP migration with real-time updates and faster loads.</li>
+                  <li>• Applied advanced JavaScript patterns, custom hooks, memoisation, and performance tuning.</li>
+                  <li>• Built shared component libraries and managed complex state with Redux Toolkit and Context API.</li>
+                  <li>• Improved stability with testing, cross-browser fixes, and code review mentorship.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            let typeSpeed = isDeleting ? 50 : 100;
+      <div class="space-y-8">
+        <div class="glass-card p-6 rounded-2xl card-hover">
+          <h3 class="text-xl font-bold mb-4 gradient-text">Key Achievements</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center"><i class="fas fa-rocket text-blue-400"></i></div>
+              <div><div class="font-semibold text-blue-300">30% Faster</div><div class="text-sm text-slate-300">Rendering and load time improvements</div></div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center"><i class="fas fa-users text-green-400"></i></div>
+              <div><div class="font-semibold text-green-300">20–25%</div><div class="text-sm text-slate-300">Higher engagement through UI improvements</div></div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center"><i class="fas fa-chart-line text-purple-400"></i></div>
+              <div><div class="font-semibold text-purple-300">12% Lift</div><div class="text-sm text-slate-300">Conversion gains on enrolment workflows</div></div>
+            </div>
+          </div>
+        </div>
 
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                typeSpeed = 500;
-            }
+        <div class="glass-card p-6 rounded-2xl card-hover" id="contact">
+          <h3 class="text-lg font-bold mb-4 gradient-text">Contact Info</h3>
+          <div class="space-y-3 text-sm text-slate-300">
+            <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-red-400"></i><span>Punjab, India</span></div>
+            <div class="flex items-center gap-3"><i class="fas fa-envelope text-red-400"></i><a href="mailto:vasudev.8847@gmail.com" class="hover:text-blue-300">vasudev.8847@gmail.com</a></div>
+            <div class="flex items-center gap-3"><i class="fas fa-phone text-red-400"></i><a href="tel:+918847279783" class="hover:text-blue-300">+91-8847279783</a></div>
+            <div class="flex items-center gap-3"><i class="fab fa-linkedin-in text-red-400"></i><a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="hover:text-blue-300">LinkedIn Profile</a></div>
+            <div class="flex items-center gap-3"><i class="fab fa-github text-red-400"></i><a href="https://github.com/VasuDev884" target="_blank" class="hover:text-blue-300">GitHub Profile</a></div>
+            <div class="flex items-center gap-3"><i class="fas fa-globe text-red-400"></i><a href="https://portfolio-vasudev-eosin.vercel.app" target="_blank" class="hover:text-blue-300">Live Portfolio</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            setTimeout(typeWriter, typeSpeed);
+  <section class="py-10 px-6" id="projects">
+    <div class="max-w-7xl mx-auto">
+      <div class="glass-card p-8 rounded-2xl card-hover">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div>
+            <h2 class="text-3xl font-bold gradient-text">Featured Projects</h2>
+            <p class="text-slate-300 mt-2">Selected from your GitHub and professional experience.</p>
+          </div>
+          <a href="https://github.com/VasuDev884" target="_blank" class="text-blue-300 hover:text-blue-200 text-sm font-medium">
+            View all repositories →
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="https://github.com/VasuDev884/Manage-your-resume-opportunities-and-AI-assisted-optimization" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">AI Resume Optimizer</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              AI-assisted resume optimization and opportunity management system designed to improve resume relevance for job descriptions and simplify job application workflows.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">React</span>
+              <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">AI Integration</span>
+              <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
+              <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">ATS Focus</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/VasuDev884/Ecommers-MERN" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">Ecommers MERN</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Full-stack MERN e-commerce application with separated frontend and backend structure, built around real-world shopping workflows and scalable product handling.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">React</span>
+              <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Node.js</span>
+              <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
+              <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">MERN</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/VasuDev884/Anydesk" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">Remote Desk MVP</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Remote desktop MVP inspired by AnyDesk using Electron, WebRTC, and Socket.IO, focused on screen sharing, signaling, and real-time peer connection workflows.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-slate-600/20 text-slate-200 rounded text-xs">Electron</span>
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">WebRTC</span>
+              <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">Socket.IO</span>
+              <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Real-time</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/VasuDev884/DigiVridh" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">DigiVridh</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Responsive website project with light mode by default, plus theme and language toggles. Built as a polished static web experience using HTML, CSS, and JavaScript.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-orange-600/20 text-orange-300 rounded text-xs">HTML</span>
+              <span class="px-2 py-1 bg-cyan-600/20 text-cyan-300 rounded text-xs">CSS</span>
+              <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">Responsive UI</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/VasuDev884/thirtysixstudios" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">Thirtysixstudios</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Modern frontend experience built with a Vite-based React project structure, focused on creative UI presentation, animation-style interaction, and polished portfolio-inspired layouts.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">React</span>
+              <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">Vite</span>
+              <span class="px-2 py-1 bg-slate-600/20 text-slate-300 rounded text-xs">ESLint</span>
+              <span class="px-2 py-1 bg-cyan-600/20 text-cyan-300 rounded text-xs">Creative UI</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/VasuDev884/ai-video-course-generator" target="_blank" class="project-card p-6 rounded-xl block">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-semibold text-blue-300">AI Video Course Generator</h3>
+              <i class="fas fa-arrow-up-right-from-square text-slate-400"></i>
+            </div>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Next.js-based application exploring AI-assisted course generation workflows, built with an app router structure and modern TypeScript-friendly project setup.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-slate-600/20 text-slate-200 rounded text-xs">Next.js</span>
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">TypeScript</span>
+              <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">AI Workflow</span>
+              <span class="px-2 py-1 bg-pink-600/20 text-pink-300 rounded text-xs">App Router</span>
+            </div>
+          </a>
+
+          <div class="project-card p-6 rounded-xl">
+            <h3 class="text-xl font-semibold text-blue-300 mb-4">School ERP System</h3>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Role-based management platform with Teacher, Student, and Parent workflows including timetable, homework, attendance, leave management, and online fee payment. Built around reusable components, JWT-secured routes, and Redux Toolkit state architecture.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">React.js</span>
+              <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">TypeScript</span>
+              <span class="px-2 py-1 bg-indigo-600/20 text-indigo-300 rounded text-xs">Redux Toolkit</span>
+              <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">JWT Auth</span>
+            </div>
+          </div>
+
+          <div class="project-card p-6 rounded-xl">
+            <h3 class="text-xl font-semibold text-blue-300 mb-4">Coursi Academy Website</h3>
+            <p class="text-slate-300 text-sm leading-7 mb-4">
+              Marketing and enrolment platform with dynamic course pages, demo booking flows, reviews, and responsive user journeys. Designed to support lead capture and improve conversion through cleaner UX.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-orange-600/20 text-orange-300 rounded text-xs">HTML5</span>
+              <span class="px-2 py-1 bg-cyan-600/20 text-cyan-300 rounded text-xs">Tailwind CSS</span>
+              <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
+              <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">REST Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="glass-card py-8 px-6 mt-16">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="text-2xl font-bold mb-4 gradient-text">VASUDEV</h3>
+      <p class="text-slate-300 mb-4">React.js Developer | JavaScript · Redux · REST APIs · Performance Optimisation</p>
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="tel:+918847279783" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i class="fas fa-phone"></i></a>
+        <a href="mailto:vasudev.8847@gmail.com" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/vasudev--" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/VasuDev884" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="text-sm opacity-75">© 2025 Vasudev. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      });
+    });
 
-        // Start typing effect after page load
-        window.addEventListener('load', () => {
-            setTimeout(typeWriter, 1000);
-        });
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 100
+        ? 'rgba(15, 23, 42, 0.96)'
+        : 'rgba(15, 23, 42, 0.55)';
+    });
 
-        // Add intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    const texts = ["VASUDEV", "REACT.JS", "JAVASCRIPT", "REDUX TOOLKIT", "REST APIs", "PERFORMANCE"];
+    const heading = document.querySelector('.typing-text');
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+    function typeWriter() {
+      const currentText = texts[textIndex];
 
-        // Observe all cards for animation
-        document.querySelectorAll('.card-hover').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
+      if (isDeleting) {
+        heading.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        heading.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
 
-        // Form submission handler
-        document.querySelector('button[type="button"]')?.addEventListener('click', function() {
-            alert('Thank you for your message! I will get back to you soon.');
-        });
-    </script>
+      let typeSpeed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === currentText.length) {
+        typeSpeed = 1500;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 350;
+      }
+
+      setTimeout(typeWriter, typeSpeed);
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(typeWriter, 800);
+    });
+
+    const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card-hover, .project-card, .skill-badge').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(18px)';
+      card.style.transition = 'all 0.6s ease';
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
